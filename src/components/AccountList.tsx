@@ -10,6 +10,7 @@ import './AccountList.css';
 interface AccountListProps {
 }
 
+/* Fetches accounts from API and populates table, as well as provides user option to choose bank.*/
 const AccountList: React.FC<AccountListProps> = ({}) => {
     const [accounts, setAccounts] = useState<AccountWithBalance[]>([]);
     const [loading, setLoading] = useState(true);

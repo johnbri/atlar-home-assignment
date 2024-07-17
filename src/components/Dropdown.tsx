@@ -6,6 +6,7 @@ type DropdownProps = {
   onSelect: (option: string) => void;
 };
 
+/* Dropdown component for selecting bank */
 const Dropdown: React.FC<DropdownProps> = ({ options, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);

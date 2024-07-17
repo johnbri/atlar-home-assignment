@@ -11,6 +11,7 @@ interface AccountDetailsProps {
     selectedBank: string;
 }
 
+/* Displays account data such as market, balance, and name, as  well as selected bank. */
 const AccountDetails: React.FC<AccountDetailsProps> = ({ account, index, selectedAccount, selectedBank, handleAccountClick }) => {
     const contentRef = useRef<HTMLDivElement>(null);
     const [contentHeight, setContentHeight] = useState(0);

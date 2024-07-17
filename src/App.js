@@ -1,11 +1,9 @@
 import './App.css';
-import AccountDetails from './components/AccountDetails.tsx';
 import AccountList from './components/AccountList.tsx';
 import React, { useState } from 'react';
 import AccountTransactions from './components/AccountTransactions.tsx';
 
 function App() {
-    const [selectedAccountId, setSelectedAccountId] = useState(null);
     const [component, setComponent] = useState("Balance")
 
     return (

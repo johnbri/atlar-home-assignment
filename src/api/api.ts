@@ -74,7 +74,7 @@ export const getBalance = async (accountId: string): Promise<Balance[]> => {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        return data.items; // Ensure we return the array of balances
+        return data.items;
     } catch (error) {
         console.error('Error fetching balance:', error);
         throw error;
