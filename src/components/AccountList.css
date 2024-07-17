@@ -1,0 +1,53 @@
+.account-list-header{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.account-list-table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 10px 0;
+  text-align: left;
+  min-width: 80%;
+
+  th, td {
+    width: auto;
+    border: 1px solid var(--border-color--secondary);
+  }
+
+  td {
+    padding: 0 15px;
+  }
+
+  th {
+    padding: 12px 15px;
+    background-color: var(--base-color--neutral--neutral-100);
+    color: var(--base-color--neutral--neutral-800);
+    position: sticky; 
+    top: 0;
+    z-index: 1;
+
+    .balance-message {
+        display: inline;
+        position: relative;
+        svg{
+            position: absolute;
+            padding-left: 10px;
+            top: 50%;   
+            transform: translateY(-50%); 
+            cursor: help;
+            color: var(--background-color--brand);
+        } 
+        svg:hover + .notification-wrapper{
+            display: block;
+        
+        }
+    }
+  }
+}

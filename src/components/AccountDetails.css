@@ -1,0 +1,37 @@
+/* AccountDetails.css */
+.account:hover {
+    background: var(--base-color--brand--primary-50);
+}
+
+.account {
+    &.selected {
+        background: var(--base-color--brand--primary-100);
+    }
+    
+    td {
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+    .balance {
+        .neg-value {
+            color: rgb(202, 0, 0);
+        }
+
+        .balance-currency {
+            font-size: 12px;
+            font-weight: 600;
+            color: gray;
+        }
+    }
+}
+
+.account-details-container {
+    overflow: hidden;
+    transition: height 0.2s ease-out;
+    background-color: #f9f9f9;
+}
+
+.account-details-content {
+    padding: 10px;
+}

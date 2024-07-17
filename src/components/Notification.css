@@ -1,0 +1,15 @@
+.notification-wrapper{
+    display: none;
+    position: absolute;
+    width: 300px;
+    right: -10px;
+    background-color: var(--background-color--brand);
+    border-radius: var(--border-radius--small);
+    color: var(--text-color--inverse-primary);
+
+    p { 
+        font-weight: 400;
+        margin: 0;
+        padding: 1rem;
+    }
+}

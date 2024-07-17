@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import AccountDetails from './components/AccountDetails.tsx';
+import AccountList from './components/AccountList.tsx';
+import React, { useState } from 'react';
+import AccountTransactions from './components/AccountTransactions.tsx';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [selectedAccountId, setSelectedAccountId] = useState(null);
+    const [component, setComponent] = useState("Balance")
+
+    return (
+        <div className='app'>
+            <h1>Atlar</h1>
+            <div className='component-buttons'>
+                <button onClick={() => setComponent("Balance")}>Balances</button>
+                <button onClick={() => setComponent("Transactions")}>Transactions</button>
+            </div>
+            {component === "Balance" && <AccountList />}
+            {component === "Transactions" && <AccountTransactions />}
+        </div>
+    );
 }
 
 export default App;
